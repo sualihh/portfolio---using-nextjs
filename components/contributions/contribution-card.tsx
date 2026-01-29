@@ -29,7 +29,7 @@ export default function ContributionCard({
               </div>
               <div className="space-y-4">
                 <p className="text-sm text-muted-foreground">
-                  {contribution.contibutionDescription}
+                  {contribution.contributionDescription}
                 </p>
                 <p className="text-sm text-muted-foreground flex space-x-2 items-center">
                   <Icons.gitOrgBuilding size={15} />
