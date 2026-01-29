@@ -10,7 +10,7 @@ function getTemplateRepoSlug(): string {
     return url.pathname.replace(/^\/+/, "");
   } catch {
     // Fallback (should never happen unless config is invalid)
-    return "namanbarkiya/minimal-next-portfolio";
+    return "sualih's-portfolio";
   }
 }
 
