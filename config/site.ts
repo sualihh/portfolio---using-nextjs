@@ -8,6 +8,7 @@ export const siteConfig = {
   links: {
     github: "https://github.com/sualihh",
     templateRepo: "https://github.com/sualihh/portfolio",
+    twitter: "https://twitter.com/sualihh"
   },
   ogImage:
     "https://res.cloudinary.com/dsfd6kdck/image/upload/v1769677932/Screenshot_2026-01-29_114628_wh9jof.png",
