@@ -82,7 +82,7 @@ export const Projects: ProjectInterface[] = [
       title: "Inventory Management",
       description:
         "Developed a structured dashboard for viewing and managing product metadata with a focus on clean UI and API efficiency.",
-        imgArr: ["/logo.png"],
+        imgArr: ["/add.png"],
     },
   ],
   descriptionDetails: {
