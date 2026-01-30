@@ -50,7 +50,7 @@ export const Projects: ProjectInterface[] = [
       title: "Cart & Checkout Logic",
       description:
         "Implemented robust state management for the shopping cart and integrated backend logic to handle order processing.",
-      imgArr: ["/eccomerce.png"],
+      imgArr: ["/cart.png"],
     },
   ],
   descriptionDetails: {
