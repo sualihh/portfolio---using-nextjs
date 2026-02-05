@@ -29,6 +29,54 @@ export interface ProjectInterface {
 
 export const Projects: ProjectInterface[] = [
  {
+  id: "social-media-platform",
+  companyName: "Social Media Platform",
+  type: "Personal",
+  category: ["Full Stack", "Frontend", "Web Dev"],
+  shortDescription:
+    "A full-featured social media platform allowing users to create posts, interact with content, and manage profiles, built with Next.js and TypeScript.",
+  githubLink: "https://github.com/sualihh/social-media",
+  techStack: [
+    "Next.js",
+    "Typescript",
+    "React",
+    "Node.js",
+    "express.js",
+    "Prisma",
+    "PostgreSQL",
+  ],
+  startDate: new Date("2025-11-01"),
+  endDate: new Date("2025-12-06"),
+  companyLogoImg: "/socialmedia.png",
+  pagesInfoArr: [
+    {
+      title: "Post Feed & Interactions",
+      description:
+        "Implemented a dynamic post feed with likes, comments, and real-time updates. Integrated backend API endpoints to handle user interactions securely.",
+      imgArr: ["/feed.png"]
+    },
+    {
+      title: "User Profiles & Authentication",
+      description:
+        "Developed user authentication and profile management using Clerk, providing secure sign-up, login, and session management without custom auth logic.",
+      imgArr: ["/signin.png"]
+    }
+  ],
+  descriptionDetails: {
+    paragraphs: [
+      "This Social Media Platform is a modern full-stack application designed to simulate a real-world social networking experience.",
+      "It connects users through posts, comments, likes, and profile management, focusing on performance, security, and scalable architecture."
+    ],
+    bullets: [
+      "Built a robust RESTful API with Node.js and Express for user, post, and interaction management.",
+      "Implemented client-side state management in Next.js using React hooks and context API.",
+      "Used Clerk to handle authentication, sessions, and user management securely with minimal backend code.",
+      "Designed responsive and interactive UI components to enhance user experience."
+    ]
+  }
+}
+,
+{
   id: "ecommerce-platform",
   companyName: "Ecommerce Platform",
   type: "Personal",
