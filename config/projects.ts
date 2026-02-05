@@ -47,14 +47,14 @@ export const Projects: ProjectInterface[] = [
   ],
   startDate: new Date("2025-11-01"),
   endDate: new Date("2025-12-06"),
-  companyLogoImg: "/socialmedia.png",
+  companyLogoImg: "/feed.png",
   pagesInfoArr: [
-    {
-      title: "Post Feed & Interactions",
-      description:
-        "Implemented a dynamic post feed with likes, comments, and real-time updates. Integrated backend API endpoints to handle user interactions securely.",
-      imgArr: ["/feed.png"]
-    },
+    // {
+    //   title: "Post Feed & Interactions",
+    //   description:
+    //     "Implemented a dynamic post feed with likes, comments, and real-time updates. Integrated backend API endpoints to handle user interactions securely.",
+    //   imgArr: ["/feed.png"]
+    // },
     {
       title: "User Profiles & Authentication",
       description:
