@@ -109,7 +109,7 @@ export default function IndexPage() {
           <div className="flex flex-col mt-10 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
             <AnimatedText delay={0.6}>
               <Link
-                href={"/#"}
+                href={"/resume"}
                 target="_blank"
                 className={cn(buttonVariants({ size: "lg" }))}
                 aria-label="View resume"
