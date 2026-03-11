@@ -113,7 +113,7 @@ export default function IndexPage() {
                 className={cn(buttonVariants({ size: "lg" }))}
                 aria-label="View resume"
               >
-                <Icons.post className="w-4 h-4 mr-2" /> Resume
+                <Icons.post className="w-4 h-4 mr-2" /> Resggume
               </Link>
             </AnimatedText>
             <AnimatedText delay={0.8}>
