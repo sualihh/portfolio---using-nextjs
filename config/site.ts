@@ -1,24 +1,20 @@
 export const siteConfig = {
-  name: "Sualih Mohammed - Applied Software Engineer",
+  name: "Sualih Mohammed - FullStack Software Developer",
   authorName: "Sualih Mohammed",
   username: "sualihh",
   description:
-    "Sualih Mohammed - Applied Software Engineer working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions in software development and AI.",
+    "Sualih Mohammed - FullStack Software Engineer working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions in software development and AI.",
   url: "http://localhost:3000",
   links: {
     github: "https://github.com/sualihh",
     templateRepo: "https://github.com/sualihh/portfolio",
     twitter: "https://twitter.com/sualihh"
   },
-  ogImage:
-    "https://res.cloudinary.com/dsfd6kdck/image/upload/v1769677932/Screenshot_2026-01-29_114628_wh9jof.png",
-  iconIco:
-    "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357384/assets/naman-favicon.ico",
-  logoIcon:
-    "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357294/assets/naman-logo.png",
+
+ 
   keywords: [
     "Sualih Mohammed",
-    "Applied AI Engineer",
+    "Fullstack developer",
     "AI Engineer",
     "Software Engineer",
     "Full Stack Developer",

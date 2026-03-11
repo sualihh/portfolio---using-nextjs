@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Sualih Mohammed | Applied Software Developer",
+    name: "Sualih Mohammed | FullStack Software Developer",
     short_name: "Sualih Mohammed",
     description:
-      "Sualih Mohammed - Applied Software Developer working at the intersection of AI, data, and scalable software systems.",
+      "Sualih Mohammed - Full Software Developer working at the intersection of AI, data, and scalable software systems.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
