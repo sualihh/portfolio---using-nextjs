@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "Sualih Mohammed - FullStack Software Developer",
+  name: "Sualih Mohammed - Full-Stack Developer | Next.js, TypeScript, MERN & PERN",
   authorName: "Sualih Mohammed",
   username: "sualihh",
   description:
-    "Sualih Mohammed - FullStack Software Engineer working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions in software development and AI.",
+    "Hi, I’m Sualih, a Full-Stack Developer specializing in Next.js, TypeScript, MERN, and PERN stacks. I build scalable, high-performance web applications with clean code and user-friendly designs.",
   url: "http://localhost:3000",
   links: {
     github: "https://github.com/sualihh",

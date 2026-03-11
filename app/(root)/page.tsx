@@ -24,7 +24,7 @@ import profileImg from "@/public/profile-img.jpg";
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title}`,
   description:
-    "Naman Barkiya - Applied AI Engineer working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions.",
+    "Hi, I’m Sualih, a Full-Stack Developer specializing in Next.js, TypeScript, MERN, and PERN stacks. I build scalable, high-performance web applications with clean code and user-friendly designs.",
   alternates: {
     canonical: siteConfig.url,
   },
