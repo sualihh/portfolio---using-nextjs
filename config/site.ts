@@ -10,7 +10,7 @@ export const siteConfig = {
     templateRepo: "https://github.com/sualihh/portfolio",
     twitter: "https://twitter.com/sualihh"
   },
-
+  // image: ".public/feed.png",
  
   keywords: [
     "Sualih Mohammed",

@@ -37,7 +37,7 @@ export default function IndexPage() {
     "@type": "Person",
     name: siteConfig.authorName,
     url: siteConfig.url,
-    image: siteConfig,
+    // image: siteConfig.image,
     jobTitle: "Fullstack Software Developer",
     sameAs: [siteConfig.links.github, siteConfig.links.twitter],
   };
