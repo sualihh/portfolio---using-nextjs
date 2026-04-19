@@ -5,10 +5,21 @@ export interface contributionsInterface {
   link: string;
 }
 
-
-
 export const contributionsUnsorted: contributionsInterface[] = [
-
+  {
+    repo: "dental-ai-assistant",
+    contributionDescription:
+      "Built an intelligent dental assistant platform featuring AI-driven diagnostic analysis, automated appointment scheduling, and patient record management using Next.js, Node.js, and PostgreSQL.",
+    repoOwner: "sualihh",
+    link: "",
+  },
+  {
+    repo: "mobile-pos-system",
+    contributionDescription:
+      "Developed a mobile-based POS platform that enables small businesses to process sales, manage inventory, and track revenue in real time, with offline-first support using SQLite to ensure uninterrupted operation during internet outages. Designed a fast checkout experience and simple UI tailored for non-technical shop owners, backed by a scalable Node.js and MongoDB architecture.",
+    repoOwner: "sualihh",
+    link: "",
+  },
   {
     repo: "ecommerce-platform",
     contributionDescription:
@@ -24,20 +35,19 @@ export const contributionsUnsorted: contributionsInterface[] = [
   //   link: "https://github.com/sualihh/ecommerce",
   // },
   {
-    repo: "minimal-next-portfolio",
+    repo: "portfolio",
     contributionDescription:
       "Customized and improved a Next.js portfolio  for personal branding, adding responsive UI and dark mode.",
     repoOwner: "sualihh",
-    link: "https://github.com/sualihh/minimal-next-portfolio",
+    link: "https://github.com/sualihh/portfolio",
   },
   {
-  repo: "product-management-app",
-  contributionDescription:
-    "Developed a full-stack Product Management application where users can view, add, edit, and delete products. Implemented structured frontend and backend architecture to practice real-world application development.",
-  repoOwner: "sualihh",
-  link: "https://github.com/sualihh/productapp",
-}
-
+    repo: "product-management-app",
+    contributionDescription:
+      "Developed a full-stack Product Management application where users can view, add, edit, and delete products. Implemented structured frontend and backend architecture to practice real-world application development.",
+    repoOwner: "sualihh",
+    link: "https://github.com/sualihh/productapp",
+  },
 ];
 
 export const featuredContributions: contributionsInterface[] =
