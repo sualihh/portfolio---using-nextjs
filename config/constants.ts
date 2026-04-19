@@ -3,6 +3,7 @@ export type ValidSkills =
   | "React"
   | "GraphQL"
   | "Nest.js"
+  |"OpenAI API"
   | "express.js"
   | "Node.js"
   | "MongoDB"
@@ -34,6 +35,7 @@ export type ValidSkills =
   | "Django"
   | "Vue.js"
   | "Sass"
+  | "AI Integration"
   | "Firebase"
   | "Azure"
   | "Google Cloud"
@@ -59,19 +61,24 @@ export type ValidSkills =
   | "Django"
   | "FastAPI"
   | "SQL"
+  | "SQLite"
   | "NoSQL"
   | "Framer Motion";
 
 export type ValidCategory =
   | "Full Stack"
   | "Frontend"
+  | "AI Integration"
   | "Backend"
+  | "AI SaaS"
   | "UI/UX"
   | "Web Dev"
+  | "Business Software"
   | "Mobile Dev"
+  | "Mobile App"
   | "3D Modeling";
 
-export type ValidExpType = "Personal" | "Professional";
+export type ValidExpType = "Personal" | "Professional" | "AI SaaS" | "SaaS";
 
 export type ValidPages =
   | "home"

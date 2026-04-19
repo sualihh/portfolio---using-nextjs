@@ -28,123 +28,222 @@ export interface ProjectInterface {
 }
 
 export const Projects: ProjectInterface[] = [
+  {
+    id: "AI-based-dental-assistant",
+    companyName: "Dental AI Solutions",
+    type: "AI SaaS",
+    category: ["Full Stack", "AI Integration", "Web Dev"],
+    shortDescription:
+      "An intelligent dental assistant platform that utilizes AI to analyze dental records, automate appointment scheduling, and provide real-time clinical decision support for practitioners.",
+    githubLink: "https://github.com/sualihh/dental-Ai-Assistant",
+    techStack: [
+      "Next.js",
+      "Typescript",
+      "React",
+      "Node.js",
+      "express.js",
+      "Prisma",
+      "PostgreSQL",
+      "OpenAI API",
+    ],
+    startDate: new Date("2026-01-15"),
+    endDate: new Date("2026-04-15"),
+    companyLogoImg: "/logo.png",
+    pagesInfoArr: [
+      {
+        title: "AI Diagnostic Dashboard",
+        description:
+          "Developed an interactive dashboard that processes patient records using AI to highlight potential areas of concern, improving diagnostic efficiency.",
+        imgArr: ["/dental-home.png"],
+      },
+      {
+        title: "Smart Appointment Scheduling",
+        description:
+          "Integrated an automated scheduling engine that manages clinic availability and patient preferences, reducing administrative overhead.",
+        imgArr: ["/dental-admin.png"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "This AI-based Dental Assistant is a specialized healthcare application designed to bridge the gap between clinical data and actionable insights.",
+        "The platform enhances practice management by automating routine workflows while providing AI-driven analysis to assist dentists in diagnostic decision-making.",
+      ],
+      bullets: [
+        "Built a secure backend architecture with Node.js and Express to handle sensitive patient health information.",
+        "Integrated OpenAI's models to analyze dental notes and patient history for clinical pattern recognition.",
+        "Developed a responsive, accessibility-focused UI using Next.js to ensure dentists can access critical data quickly in a clinical setting.",
+        "Utilized Prisma ORM for efficient database management, ensuring data integrity and complex relational mapping between patients, appointments, and diagnostic logs.",
+      ],
+    },
+  },
  {
-  id: "social-media-platform",
-  companyName: "Social Media Platform",
-  type: "Personal",
-  category: ["Full Stack", "Frontend", "Web Dev"],
+  id: "mobile-pos-system",
+  companyName: "Mobile POS System",
+  type: "SaaS",
+  category: ["Full Stack", "Mobile App", "Business Software"],
   shortDescription:
-    "A full-featured social media platform allowing users to create posts, interact with content, and manage profiles, built with Next.js and TypeScript.",
-  githubLink: "https://github.com/sualihh/social-media",
+    "A mobile-based Point of Sale (POS) system that enables small businesses to manage sales, inventory, and customers both online and offline.",
+
   techStack: [
-    "Next.js",
+    "React Native",
     "Typescript",
-    "React",
     "Node.js",
     "express.js",
+    "MongoDB",
+    "SQLite",
     "Prisma",
-    "PostgreSQL",
   ],
-  startDate: new Date("2025-11-01"),
-  endDate: new Date("2025-12-06"),
-  companyLogoImg: "/feed.png",
-  pagesInfoArr: [
-    // {
-    //   title: "Post Feed & Interactions",
-    //   description:
-    //     "Implemented a dynamic post feed with likes, comments, and real-time updates. Integrated backend API endpoints to handle user interactions securely.",
-    //   imgArr: ["/feed.png"]
-    // },
-    {
-      title: "User Profiles & Authentication",
-      description:
-        "Developed user authentication and profile management using Clerk, providing secure sign-up, login, and session management without custom auth logic.",
-      imgArr: ["/signin.png"]
-    }
-  ],
-  descriptionDetails: {
-    paragraphs: [
-      "This Social Media Platform is a modern full-stack application designed to simulate a real-world social networking experience.",
-      "It connects users through posts, comments, likes, and profile management, focusing on performance, security, and scalable architecture."
-    ],
-    bullets: [
-      "Built a robust RESTful API with Node.js and Express for user, post, and interaction management.",
-      "Implemented client-side state management in Next.js using React hooks and context API.",
-      "Used Clerk to handle authentication, sessions, and user management securely with minimal backend code.",
-      "Designed responsive and interactive UI components to enhance user experience."
-    ]
-  }
-}
-,
-{
-  id: "ecommerce-platform",
-  companyName: "Ecommerce Platform",
-  type: "Personal",
-  category: ["Full Stack", "Backend", "Web Dev"],
-  shortDescription:
-    "A comprehensive online shopping simulation featuring product browsing, cart management, and administrative business logic.",
-    githubLink: "https://github.com/sualihh/eccomerce",
-  techStack: [
-      "React",
-      "Javascript", 
-      "Node.js", 
-      "express.js",
-      "MongoDB"],
-  startDate: new Date("2024-01-01"), 
-  endDate: new Date("2024-06-01"),   
-  companyLogoImg: "/eccomerce.png",
+
+  startDate: new Date("2026-01-01"),
+  endDate: new Date("2026-02-15"),
+
+  companyLogoImg: "/pos.png",
+
   pagesInfoArr: [
     {
-      title: "Cart & Checkout Logic",
+      title: "Sales & Checkout Flow",
       description:
-        "Implemented robust state management for the shopping cart and integrated backend logic to handle order processing.",
-      imgArr: ["/cart.png"],
+        "Built a fast and intuitive checkout system allowing shop owners to process sales, calculate totals, and handle payments efficiently. Designed for speed under real shop conditions.",
+      imgArr: ["/checkout.png"],
     },
-  ],
-  descriptionDetails: {
-    paragraphs: [
-      "This Ecommerce Platform is a complete full-stack solution built to simulate a high-performance online shopping environment.",
-      "The application bridges the gap between consumer-facing interfaces and administrative back-office tools, focusing on seamless product discovery and secure data handling.",
-    ],
-    bullets: [
-      "Developed a full-featured shopping cart system with real-time updates and persistent storage.",
-      "Built a secure administrative dashboard for managing inventory, user roles, and order tracking.",
-      "Engineered a RESTful API using Node.js and Express to manage product catalogs and user authentication.",
-    ],
-  },
-},
-{
-  id: "productapp",
-  companyName: "Product App",
-  type: "Personal",
-  category: ["Full Stack", "Web Dev"],
-  shortDescription:
-    "A full-stack product management tool designed for efficient CRUD operations and structured inventory oversight.",
-    githubLink: "https://github.com/sualihh/productapp",
-  techStack: ["Javascript", "Node.js", "express.js", "React", "PostgreSQL"],
-  startDate: new Date("2024-07-01"), 
-  endDate: new Date("2024-08-15"),  
-  companyLogoImg: "/product app.png",
-  pagesInfoArr: [
     {
       title: "Inventory Management",
       description:
-        "Developed a structured dashboard for viewing and managing product metadata with a focus on clean UI and API efficiency.",
-        imgArr: ["/add.png"],
+        "Implemented real-time inventory tracking with stock updates after each sale. Includes low-stock alerts and product management features.",
+      imgArr: ["/inventory.png"],
+    },
+    {
+      title: "Reports & Insights",
+      description:
+        "Generated daily and monthly sales reports to help business owners track performance and make decisions based on real data.",
+      imgArr: ["/reports.png"],
     },
   ],
+
   descriptionDetails: {
     paragraphs: [
-      "ProductApp is a specialized management tool designed to practice the fundamentals of real-world application architecture.",
-      "By decoupling the frontend presentation from the backend business logic, the app ensures scalability and easy maintenance for product-heavy datasets.",
+      "This Mobile POS System is designed for small and medium businesses that need a reliable, easy-to-use sales solution.",
+      "The system focuses on real-world challenges such as unreliable internet, fast transaction processing, and simple user experience for non-technical users.",
     ],
     bullets: [
-      "Designed and implemented a full suite of CRUD (Create, Read, Update, Delete) operations for product data.",
-      "Architected a clean, modular backend structure using the Express framework to handle request routing.",
-      "Focused on creating a responsive and intuitive user interface to streamline inventory workflows.",
+      "Developed a complete sales flow including cart, checkout, and receipt generation.",
+      "Implemented offline-first architecture using SQLite with background synchronization to MongoDB.",
+      "Designed scalable backend APIs for managing products, sales, and users.",
+      "Optimized performance for low-end Android devices commonly used by small businesses.",
+      "Focused on usability to minimize training time for shop owners and employees.",
     ],
   },
 },
+  {
+    id: "social-media-platform",
+    companyName: "Social Media Platform",
+    type: "Personal",
+    category: ["Full Stack", "Frontend", "Web Dev"],
+    shortDescription:
+      "A full-featured social media platform allowing users to create posts, interact with content, and manage profiles, built with Next.js and TypeScript.",
+    techStack: [
+      "Next.js",
+      "Typescript",
+      "React",
+      "Node.js",
+      "express.js",
+      "Prisma",
+      "PostgreSQL",
+    ],
+    startDate: new Date("2025-11-01"),
+    endDate: new Date("2025-12-06"),
+    companyLogoImg: "/feed.png",
+    pagesInfoArr: [
+      // {
+      //   title: "Post Feed & Interactions",
+      //   description:
+      //     "Implemented a dynamic post feed with likes, comments, and real-time updates. Integrated backend API endpoints to handle user interactions securely.",
+      //   imgArr: ["/feed.png"]
+      // },
+      {
+        title: "User Profiles & Authentication",
+        description:
+          "Developed user authentication and profile management using Clerk, providing secure sign-up, login, and session management without custom auth logic.",
+        imgArr: ["/signin.png"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "This Social Media Platform is a modern full-stack application designed to simulate a real-world social networking experience.",
+        "It connects users through posts, comments, likes, and profile management, focusing on performance, security, and scalable architecture.",
+      ],
+      bullets: [
+        "Built a robust RESTful API with Node.js and Express for user, post, and interaction management.",
+        "Implemented client-side state management in Next.js using React hooks and context API.",
+        "Used Clerk to handle authentication, sessions, and user management securely with minimal backend code.",
+        "Designed responsive and interactive UI components to enhance user experience.",
+      ],
+    },
+  },
+  {
+    id: "ecommerce-platform",
+    companyName: "Ecommerce Platform",
+    type: "Personal",
+    category: ["Full Stack", "Backend", "Web Dev"],
+    shortDescription:
+      "A comprehensive online shopping simulation featuring product browsing, cart management, and administrative business logic.",
+    githubLink: "https://github.com/sualihh/eccomerce",
+    techStack: ["React", "Javascript", "Node.js", "express.js", "MongoDB"],
+    startDate: new Date("2024-01-01"),
+    endDate: new Date("2024-06-01"),
+    companyLogoImg: "/eccomerce.png",
+    pagesInfoArr: [
+      {
+        title: "Cart & Checkout Logic",
+        description:
+          "Implemented robust state management for the shopping cart and integrated backend logic to handle order processing.",
+        imgArr: ["/cart.png"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "This Ecommerce Platform is a complete full-stack solution built to simulate a high-performance online shopping environment.",
+        "The application bridges the gap between consumer-facing interfaces and administrative back-office tools, focusing on seamless product discovery and secure data handling.",
+      ],
+      bullets: [
+        "Developed a full-featured shopping cart system with real-time updates and persistent storage.",
+        "Built a secure administrative dashboard for managing inventory, user roles, and order tracking.",
+        "Engineered a RESTful API using Node.js and Express to manage product catalogs and user authentication.",
+      ],
+    },
+  },
+  {
+    id: "productapp",
+    companyName: "Product App",
+    type: "Personal",
+    category: ["Full Stack", "Web Dev"],
+    shortDescription:
+      "A full-stack product management tool designed for efficient CRUD operations and structured inventory oversight.",
+    githubLink: "https://github.com/sualihh/productapp",
+    techStack: ["Javascript", "Node.js", "express.js", "React", "PostgreSQL"],
+    startDate: new Date("2024-07-01"),
+    endDate: new Date("2024-08-15"),
+    companyLogoImg: "/product app.png",
+    pagesInfoArr: [
+      {
+        title: "Inventory Management",
+        description:
+          "Developed a structured dashboard for viewing and managing product metadata with a focus on clean UI and API efficiency.",
+        imgArr: ["/add.png"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "ProductApp is a specialized management tool designed to practice the fundamentals of real-world application architecture.",
+        "By decoupling the frontend presentation from the backend business logic, the app ensures scalability and easy maintenance for product-heavy datasets.",
+      ],
+      bullets: [
+        "Designed and implemented a full suite of CRUD (Create, Read, Update, Delete) operations for product data.",
+        "Architected a clean, modular backend structure using the Express framework to handle request routing.",
+        "Focused on creating a responsive and intuitive user interface to streamline inventory workflows.",
+      ],
+    },
+  },
   {
     id: "convot",
     companyName: "Convot",
@@ -291,7 +390,7 @@ export const Projects: ProjectInterface[] = [
   //   category: ["Mobile Dev", "Full Stack", "UI/UX"],
   //   shortDescription:
   //     "Elevated The Super Quotes app with JavaScript, React Native, APIs, Redux magic, and Google Play Store debut.",
-   
+
   //   techStack: ["React Native", "Node.js", "MongoDB", "Javascript"],
   //   startDate: new Date("2021-07-01"),
   //   endDate: new Date("2022-07-01"),
