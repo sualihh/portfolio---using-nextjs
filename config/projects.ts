@@ -48,7 +48,7 @@ export const Projects: ProjectInterface[] = [
     ],
     startDate: new Date("2026-01-15"),
     endDate: new Date("2026-04-15"),
-    companyLogoImg: "/logo.png",
+    companyLogoImg: "/dental-logo.png",
     pagesInfoArr: [
       {
         title: "AI Diagnostic Dashboard",
