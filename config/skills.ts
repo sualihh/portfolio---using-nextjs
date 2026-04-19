@@ -16,26 +16,19 @@ export const skillsUnsorted: skillsInterface[] = [
     icon: Icons.nextjs,
   },
   {
+    name: "React Native",
+    description:
+      "Build cross-platform mobile applications using a single codebase, enabling fast development of performant iOS and Android apps with native components and APIs.",
+    rating: 5,
+    icon: Icons.react,
+  },
+  {
     name: "React",
     description:
       "Craft interactive user interfaces using components, state, props, and virtual DOM.",
     rating: 5,
     icon: Icons.react,
   },
-  {
-    name: "GraphQL",
-    description:
-      "Fetch data precisely with a powerful query language for APIs and runtime execution.",
-    rating: 4,
-    icon: Icons.graphql,
-  },
-  // {
-  //   name: "Nest.js",
-  //   description:
-  //     "Create scalable and modular applications with a progressive Node.js framework.",
-  //   rating: 4,
-  //   icon: Icons.nestjs,
-  // },
   {
     name: "express.js",
     description:
@@ -64,6 +57,22 @@ export const skillsUnsorted: skillsInterface[] = [
     rating: 5,
     icon: Icons.typescript,
   },
+
+  {
+    name: "GraphQL",
+    description:
+      "Fetch data precisely with a powerful query language for APIs and runtime execution.",
+    rating: 4,
+    icon: Icons.graphql,
+  },
+  // {
+  //   name: "Nest.js",
+  //   description:
+  //     "Create scalable and modular applications with a progressive Node.js framework.",
+  //   rating: 4,
+  //   icon: Icons.nestjs,
+  // },
+
   {
     name: "Javascript",
     description:
@@ -84,13 +93,6 @@ export const skillsUnsorted: skillsInterface[] = [
       "Style web pages creatively with the latest iteration of Cascading Style Sheets.",
     rating: 4,
     icon: Icons.css3,
-  },
-  {
-    name: "React Native",
-    description:
-      "Develop cross-platform mobile apps using React for consistent and engaging experiences.",
-    rating: 4,
-    icon: Icons.react,
   },
   // {
   //   name: "Angular",
