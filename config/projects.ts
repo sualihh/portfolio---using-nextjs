@@ -94,6 +94,7 @@ export const Projects: ProjectInterface[] = [
     "Prisma",
   ],
 
+  
   startDate: new Date("2026-01-01"),
   endDate: new Date("2026-02-15"),
 
