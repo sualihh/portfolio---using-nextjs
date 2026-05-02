@@ -97,7 +97,7 @@ export default function IndexPage() {
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
           >
-            Full-Stack Web And Mobile Developer | Next.js, TypeScript, React Native, React Js
+            Full-Stack Web And Mobile App Developer | Next.js, TypeScript, React Native, React Js
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
