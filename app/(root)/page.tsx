@@ -97,18 +97,18 @@ export default function IndexPage() {
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
           >
-            Full-Stack Developer | Next.js, TypeScript, MERN & PERN
+            Full-Stack Web And Mobile Developer | Next.js, TypeScript, React Native, React Js
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
-              Hi, I’m Sualih, a Full-Stack Developer specializing in Next.js, TypeScript, MERN, and PERN stacks. I build scalable, high-performance web applications with clean code and user-friendly designs.
+              Hi, I’m Sualih, a Full-StackWeb And Mobile Developer specializing in Next.js, TypeScript, React Native, React, MERN, and PERN stacks. I build scalable, high-performance web and mobile applications with clean code and user-friendly designs.
             </p>
           </div>
 
           <div className="flex flex-col mt-10 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
             <AnimatedText delay={0.6}>
               <Link
-                href={"/#"}
+                href={"/SUALIH MOHAMMED (1).pdf"}
                 target="_blank"
                 className={cn(buttonVariants({ size: "lg" }))}
                 aria-label="View resume"
