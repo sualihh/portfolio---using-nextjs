@@ -29,6 +29,176 @@ export interface ProjectInterface {
 
 export const Projects: ProjectInterface[] = [
   {
+    id: "ecommerce-platform",
+    companyName: "Ecommerce Platform",
+    type: "Personal",
+    category: ["Full Stack", "Backend", "Web Dev"],
+    shortDescription:
+      "A complete shopping experience with product discovery, category browsing, order tracking, and a customer storefront.",
+    githubLink: "https://github.com/sualihh/eccomerce",
+    techStack: ["React", "Javascript", "Node.js", "express.js", "MongoDB"],
+    startDate: new Date("2024-01-01"),
+    endDate: new Date("2024-06-01"),
+    companyLogoImg: "/eccomerce.png",
+    pagesInfoArr: [
+      {
+        title: "Storefront & Newsletter",
+        description:
+          "A branded storefront landing page introduces the shop, with a newsletter form for visitors who want product updates.",
+        imgArr: [
+          "/projects/viva-store/storefront-hero.png",
+          "/projects/viva-store/newsletter-signup.png",
+        ],
+      },
+      {
+        title: "Product Categories",
+        description:
+          "Category browsing helps shoppers explore the catalog by product type.",
+        imgArr: ["/projects/viva-store/category-browse.png"],
+      },
+      {
+        title: "Product Catalog",
+        description:
+          "Product listing views present the catalog with category navigation, filtering, and product imagery.",
+        imgArr: [
+          "/projects/viva-store/product-catalog.png",
+          "/projects/viva-store/product-filtering.png",
+          "/projects/viva-store/product-gallery.png",
+        ],
+      },
+      {
+        title: "Popular Products",
+        description:
+          "A featured-products section highlights popular items to help shoppers discover products.",
+        imgArr: ["/projects/viva-store/popular-products.png"],
+      },
+      {
+        title: "Order Tracking",
+        description:
+          "A lookup form allows customers to enter their order details and check delivery progress.",
+        imgArr: ["/projects/viva-store/order-tracking.png"],
+      },
+      {
+        title: "Cart & Checkout Logic",
+        description:
+          "Implemented robust state management for the shopping cart and integrated backend logic to handle order processing.",
+        imgArr: ["/cart.png"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "This Ecommerce Platform is a complete full-stack solution built to simulate a high-performance online shopping environment.",
+        "The application bridges the gap between consumer-facing interfaces and administrative back-office tools, focusing on seamless product discovery and secure data handling.",
+      ],
+      bullets: [
+        "Developed a full-featured shopping cart system with real-time updates and persistent storage.",
+        "Built a secure administrative dashboard for managing inventory, user roles, and order tracking.",
+        "Engineered a RESTful API using Node.js and Express to manage product catalogs and user authentication.",
+      ],
+    },
+  },
+  {
+    id: "qelem-inventory-management",
+    companyName: "Qelem Media Inventory",
+    type: "Personal",
+    category: ["Full Stack", "Business Software", "Web Dev"],
+    shortDescription:
+      "An inventory and sales management dashboard for tracking stock, orders, revenue, reports, and team accounts.",
+    techStack: [],
+    startDate: new Date("2026-05-15"),
+    endDate: new Date("2026-05-15"),
+    companyLogoImg: "/projects/inventory-management/dashboard.png",
+    pagesInfoArr: [
+      {
+        title: "Dashboard",
+        description:
+          "A business overview of revenue and sales activity, with recent orders, low-stock alerts, and quick links to common tasks.",
+        imgArr: [
+          "/projects/inventory-management/dashboard.png",
+          "/projects/inventory-management/dashboard-sales.png",
+          "/projects/inventory-management/dashboard-revenue.png",
+        ],
+      },
+      {
+        title: "Inventory",
+        description:
+          "Product and stock views for managing the catalog and monitoring item quantities.",
+        imgArr: [
+          "/projects/inventory-management/inventory-overview.png",
+          "/projects/inventory-management/inventory-stock.png",
+          "/projects/inventory-management/inventory-management.png",
+        ],
+      },
+      {
+        title: "Orders & Sales",
+        description:
+          "Order lists and sales summaries help staff review transactions, customer details, payment status, and daily totals.",
+        imgArr: [
+          "/projects/inventory-management/orders-and-sales.png",
+          "/projects/inventory-management/orders-overview.png",
+          "/projects/inventory-management/orders-list.png",
+          "/projects/inventory-management/orders-activity.png",
+          "/projects/inventory-management/order-list.png",
+        ],
+      },
+      {
+        title: "Analytics",
+        description:
+          "Sales and performance dashboards summarize revenue, trends, and business activity.",
+        imgArr: [
+          "/projects/inventory-management/sales-analytics.png",
+          "/projects/inventory-management/analytics-performance.png",
+          "/projects/inventory-management/analytics-overview.png",
+        ],
+      },
+      {
+        title: "Reports",
+        description:
+          "Daily and summary reports make it easier to review sales and prepare business records for export.",
+        imgArr: [
+          "/projects/inventory-management/sales-report-daily.png",
+          "/projects/inventory-management/sales-report-summary.png",
+          "/projects/inventory-management/sales-report-details.png",
+          "/projects/inventory-management/reports-export.png",
+        ],
+      },
+      {
+        title: "Team & Settings",
+        description:
+          "Administrative settings include user and role management alongside general application preferences.",
+        imgArr: [
+          "/projects/inventory-management/settings-user-management.png",
+          "/projects/inventory-management/settings-role-management.png",
+          "/projects/inventory-management/settings-general.png",
+        ],
+      },
+      {
+        title: "User Accounts",
+        description:
+          "Sign-in and profile screens support secure access and individual account management.",
+        imgArr: [
+          "/projects/inventory-management/sign-in.png",
+          "/projects/inventory-management/user-profile.png",
+          "/projects/inventory-management/profile-security.png",
+          "/projects/inventory-management/profile-settings.png",
+          "/projects/inventory-management/account-profile.png",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "Qelem Media Inventory is a business management interface for keeping track of products, stock, orders, and sales in one place.",
+        "The dashboard brings day-to-day operations together with low-stock alerts, sales analytics, reports, and account administration.",
+      ],
+      bullets: [
+        "Review inventory levels and identify products that need restocking.",
+        "Track orders, approval statuses, customers, and sales totals.",
+        "Monitor revenue and business performance using analytics and reports.",
+        "Manage team accounts, roles, and application settings.",
+      ],
+    },
+  },
+  {
     id: "AI-based-dental-assistant",
     companyName: "Dental AI Solutions",
     type: "AI SaaS",
@@ -48,19 +218,58 @@ export const Projects: ProjectInterface[] = [
     ],
     startDate: new Date("2026-01-15"),
     endDate: new Date("2026-04-15"),
-    companyLogoImg: "/dental-logo.png",
+    companyLogoImg: "/dental-logo.svg",
     pagesInfoArr: [
       {
-        title: "AI Diagnostic Dashboard",
+        title: "Dental Assistant Landing Page",
         description:
-          "Developed an interactive dashboard that processes patient records using AI to highlight potential areas of concern, improving diagnostic efficiency.",
-        imgArr: ["/dental-home.png"],
+          "Introduces the AI dental assistant and guides patients through its care journey, including common questions and next steps.",
+        imgArr: [
+          "/projects/dental-ai/landing-hero.png",
+          "/projects/dental-ai/oral-health-steps.png",
+          "/projects/dental-ai/faq.png",
+        ],
       },
       {
-        title: "Smart Appointment Scheduling",
+        title: "Patient Dashboard",
         description:
-          "Integrated an automated scheduling engine that manages clinic availability and patient preferences, reducing administrative overhead.",
-        imgArr: ["/dental-admin.png"],
+          "A personalized home screen with quick access to AI dental guidance, appointment booking, and patient account features.",
+        imgArr: [
+          "/projects/dental-ai/patient-dashboard.png",
+          "/projects/dental-ai/dashboard-quick-actions.png",
+          "/projects/dental-ai/dashboard-overview.png",
+          "/projects/dental-ai/patient-services.png",
+        ],
+      },
+      {
+        title: "Appointment Booking",
+        description:
+          "Lets patients choose a dentist, date, and available time slot to request an appointment online.",
+        imgArr: ["/projects/dental-ai/appointment-booking.png"],
+      },
+      {
+        title: "AI Voice Consultation",
+        description:
+          "A live voice conversation with the dental assistant, with spoken responses and a real-time transcript.",
+        imgArr: ["/projects/dental-ai/voice-consultation.png"],
+      },
+      {
+        title: "Membership Plans",
+        description:
+          "Presents available dental-care plans and their benefits so patients can compare membership options.",
+        imgArr: [
+          "/projects/dental-ai/pricing-plans.png",
+          "/projects/dental-ai/premium-plan-selection.png",
+        ],
+      },
+      {
+        title: "Account Access",
+        description:
+          "The account sign-up and access flow for patients joining the dental assistant platform.",
+        imgArr: [
+          "/projects/dental-ai/account-creation.png",
+          "/projects/dental-ai/account-access.png",
+        ],
       },
     ],
     descriptionDetails: {
@@ -155,17 +364,44 @@ export const Projects: ProjectInterface[] = [
     endDate: new Date("2025-12-06"),
     companyLogoImg: "/feed.png",
     pagesInfoArr: [
-      // {
-      //   title: "Post Feed & Interactions",
-      //   description:
-      //     "Implemented a dynamic post feed with likes, comments, and real-time updates. Integrated backend API endpoints to handle user interactions securely.",
-      //   imgArr: ["/feed.png"]
-      // },
       {
-        title: "User Profiles & Authentication",
+        title: "Social Feed",
         description:
-          "Developed user authentication and profile management using Clerk, providing secure sign-up, login, and session management without custom auth logic.",
-        imgArr: ["/signin.png"],
+          "A personalized feed for browsing community posts, viewing shared photos, and interacting with updates.",
+        imgArr: [
+          "/projects/social-platform/news-feed.png",
+          "/projects/social-platform/image-post-feed.png",
+        ],
+      },
+      {
+        title: "Create a Post",
+        description:
+          "The post composer lets members prepare and publish new content to the community feed.",
+        imgArr: ["/projects/social-platform/create-post-dialog.png"],
+      },
+      {
+        title: "Member Profiles",
+        description:
+          "Profile views display member details and their posts in a dedicated social profile.",
+        imgArr: [
+          "/projects/social-platform/member-profile.png",
+          "/projects/social-platform/profile-details.png",
+        ],
+      },
+      {
+        title: "Direct Messages",
+        description:
+          "A private messaging inbox and conversation view for communicating with other members.",
+        imgArr: [
+          "/projects/social-platform/direct-messages.png",
+          "/projects/social-platform/conversation-view.png",
+        ],
+      },
+      {
+        title: "Notifications",
+        description:
+          "A central notifications view keeps members informed about activity and updates on their account.",
+        imgArr: ["/projects/social-platform/notifications.png"],
       },
     ],
     descriptionDetails: {
@@ -178,38 +414,6 @@ export const Projects: ProjectInterface[] = [
         "Implemented client-side state management in Next.js using React hooks and context API.",
         "Used Clerk to handle authentication, sessions, and user management securely with minimal backend code.",
         "Designed responsive and interactive UI components to enhance user experience.",
-      ],
-    },
-  },
-  {
-    id: "ecommerce-platform",
-    companyName: "Ecommerce Platform",
-    type: "Personal",
-    category: ["Full Stack", "Backend", "Web Dev"],
-    shortDescription:
-      "A comprehensive online shopping simulation featuring product browsing, cart management, and administrative business logic.",
-    githubLink: "https://github.com/sualihh/eccomerce",
-    techStack: ["React", "Javascript", "Node.js", "express.js", "MongoDB"],
-    startDate: new Date("2024-01-01"),
-    endDate: new Date("2024-06-01"),
-    companyLogoImg: "/eccomerce.png",
-    pagesInfoArr: [
-      {
-        title: "Cart & Checkout Logic",
-        description:
-          "Implemented robust state management for the shopping cart and integrated backend logic to handle order processing.",
-        imgArr: ["/cart.png"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "This Ecommerce Platform is a complete full-stack solution built to simulate a high-performance online shopping environment.",
-        "The application bridges the gap between consumer-facing interfaces and administrative back-office tools, focusing on seamless product discovery and secure data handling.",
-      ],
-      bullets: [
-        "Developed a full-featured shopping cart system with real-time updates and persistent storage.",
-        "Built a secure administrative dashboard for managing inventory, user roles, and order tracking.",
-        "Engineered a RESTful API using Node.js and Express to manage product catalogs and user authentication.",
       ],
     },
   },

@@ -8,25 +8,48 @@ import { cn } from "@/lib/utils";
 
 export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
-    <footer className={cn(className)}>
-      <div className="container flex items-center justify-center gap-8 mt-10 py-10 md:h-24">
-        {SocialLinks.map((item, ind) => (
-          <CustomTooltip icon={item.icon} text={item.username} key={ind}>
-            <Link
-              href={item.link}
-              target="_blank"
-              className={cn(
-                buttonVariants({
-                  variant: "ghost",
-                  size: "sm",
-                }),
-                "h-10 w-10 p-2"
-              )}
-            >
-              <item.icon className="h-5 w-5" />
-            </Link>
-          </CustomTooltip>
-        ))}
+    <footer className={cn("border-t border-border/70 bg-muted/20", className)}>
+      <div className="container flex flex-col gap-6 py-8 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p className="text-sm font-semibold">Sualih Mohammed</p>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Full-stack developer building thoughtful digital products.
+          </p>
+        </div>
+        <div className="flex items-center gap-2">
+          {SocialLinks.map((item) => (
+            <CustomTooltip icon={item.icon} text={item.username} key={item.name}>
+              <Link
+                href={item.link}
+                target={item.link.startsWith("http") ? "_blank" : undefined}
+                rel={item.link.startsWith("http") ? "noreferrer" : undefined}
+                aria-label={item.name}
+                className={cn(
+                  buttonVariants({
+                    variant: "outline",
+                    size: "icon",
+                  }),
+                  "h-10 w-10 rounded-xl bg-background"
+                )}
+              >
+                <item.icon className="h-4 w-4" />
+              </Link>
+            </CustomTooltip>
+          ))}
+        </div>
+      </div>
+      <div className="border-t border-border/70">
+        <div className="container flex flex-col gap-2 py-4 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+          <span>
+            © {new Date().getFullYear()} Sualih Mohammed. All rights reserved.
+          </span>
+          <Link
+            href="/projects"
+            className="w-fit transition-colors hover:text-foreground"
+          >
+            Browse selected projects
+          </Link>
+        </div>
       </div>
     </footer>
   );

@@ -67,7 +67,7 @@ export const experiences: ExperienceInterface[] = [
       "OpenAI API",
     ],
     companyUrl: "",
-    logo: "/dental-logo.png",
+    logo: "/dental-logo.svg",
   },
 
   {

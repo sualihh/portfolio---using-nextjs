@@ -1,54 +1,34 @@
-import { Norican } from "next/font/google";
 import Link from "next/link";
-import * as React from "react";
 
-import { siteConfig } from "@/config/site";
-import { useLockBody } from "@/hooks/use-lock-body";
-import { cn } from "@/lib/utils";
+import { RouteItem } from "@/config/routes";
 
 interface MobileNavProps {
-  items: any[];
-  children?: React.ReactNode;
+  items: RouteItem[];
+  onNavigate: () => void;
 }
 
-const norican = Norican({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-  display: "swap",
-});
-
-export function MobileNav({ items, children }: MobileNavProps) {
-  useLockBody();
-
+export function MobileNav({ items, onNavigate }: MobileNavProps) {
   return (
-    <div
-      className={cn(
-        "fixed inset-0 top-12 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-6 pb-32 shadow-md animate-in slide-in-from-top-10 md:hidden"
-      )}
-    >
-      <div className="relative z-20 grid gap-6 rounded-md bg-popover p-4 text-popover-foreground shadow-md">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className={cn(norican.className, "text-2xl")}>
-            {siteConfig.authorName}
-          </span>
+    <div className="absolute inset-x-0 top-full z-50 border-b border-border bg-background px-4 pb-5 pt-3 shadow-xl md:hidden">
+      <nav aria-label="Mobile navigation" className="container grid gap-1">
+        {items.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            onClick={onNavigate}
+            className="rounded-lg px-4 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+          >
+            {item.title}
+          </Link>
+        ))}
+        <Link
+          href="/contact"
+          onClick={onNavigate}
+          className="mt-2 rounded-lg bg-primary px-4 py-3 text-center text-sm font-medium text-primary-foreground"
+        >
+          Let&apos;s talk
         </Link>
-        <nav className="grid grid-flow-row auto-rows-max text-sm">
-          {items.map((item, index) => (
-            <Link
-              key={index}
-              href={item.disabled ? "#" : item.href}
-              className={cn(
-                "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
-                item.disabled && "cursor-not-allowed opacity-60"
-              )}
-            >
-              {item.title}
-            </Link>
-          ))}
-        </nav>
-        {children ? <div className="pt-2">{children}</div> : null}
-      </div>
+      </nav>
     </div>
   );
 }

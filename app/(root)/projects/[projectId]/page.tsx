@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
@@ -18,17 +19,36 @@ interface ProjectPageProps {
   }>;
 }
 
-const githubUsername = "namanbarkiya";
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const { projectId } = await params;
+  const project = Projects.find((item) => item.id === projectId);
+
+  if (!project) {
+    return { title: "Project not found" };
+  }
+
+  return {
+    title: project.companyName,
+    description: project.shortDescription,
+    openGraph: {
+      title: project.companyName,
+      description: project.shortDescription,
+      images: [project.companyLogoImg],
+    },
+  };
+}
 
 export default async function Project({ params }: ProjectPageProps) {
   const { projectId } = await params;
-  let project = Projects.find((val) => val.id === projectId);
+  const project = Projects.find((val) => val.id === projectId);
   if (!project) {
     redirect("/projects");
   }
 
   return (
-    <article className="container relative max-w-3xl py-6 lg:py-10">
+    <article className="container relative max-w-6xl py-6 lg:py-10">
       <Link
         href="/projects"
         className={cn(
@@ -41,7 +61,7 @@ export default async function Project({ params }: ProjectPageProps) {
       </Link>
       <div>
         <time
-          dateTime={Date.now().toString()}
+          dateTime={project.startDate.toISOString()}
           className="block text-sm text-muted-foreground"
         >
           {formatDateFromObj(project.startDate)}
@@ -91,57 +111,82 @@ export default async function Project({ params }: ProjectPageProps) {
 
       <Image
         src={project.companyLogoImg}
-        alt={project.companyName}
-        width={720}
-        height={405}
-        className="my-8 rounded-md border bg-muted transition-colors"
+        alt={`${project.companyName} project preview`}
+        width={1280}
+        height={720}
+        className="my-8 h-auto w-full rounded-2xl border bg-muted shadow-sm"
         priority
       />
 
-      <div className="mb-7 ">
-        <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
-          Tech Stack
-        </h2>
-        <ChipContainer textArr={project.techStack} />
-      </div>
+      {project.techStack.length > 0 && (
+        <div className="mb-10 rounded-2xl border border-border bg-card p-6 shadow-sm">
+          <h2 className="mb-4 font-heading text-2xl leading-tight">
+            Built with
+          </h2>
+          <ChipContainer textArr={project.techStack} />
+        </div>
+      )}
 
-      <div className="mb-7 ">
-        <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
-          Description
+      <section className="mb-10">
+        <h2 className="mb-4 font-heading text-3xl leading-tight">
+          About this project
         </h2>
-        {/* {<project.descriptionComponent />} */}
-        <ProjectDescription
-          paragraphs={project.descriptionDetails.paragraphs}
-          bullets={project.descriptionDetails.bullets}
-        />
-      </div>
+        <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+          <ProjectDescription
+            paragraphs={project.descriptionDetails.paragraphs}
+            bullets={project.descriptionDetails.bullets}
+          />
+        </div>
+      </section>
 
-      <div className="mb-7 ">
-        <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
-          Page Info
+      <section className="mb-10">
+        <h2 className="mb-6 font-heading text-3xl leading-tight">
+          Project highlights
         </h2>
-        {project.pagesInfoArr.map((page, ind) => (
-          <div key={ind}>
-            <h3 className="flex items-center font-heading text-xl leading-tight lg:text-xl mt-3">
-              <Icons.star className="h-5 w-5 mr-2" /> {page.title}
-            </h3>
-            <div>
-              <p>{page.description}</p>
-              {page.imgArr.map((img, ind) => (
-                <Image
-                  src={img}
-                  key={ind}
-                  alt={img}
-                  width={720}
-                  height={405}
-                  className="my-4 rounded-md border bg-muted transition-colors"
-                  priority
-                />
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+        <div className="space-y-8">
+          {project.pagesInfoArr.map((page, pageIndex) => (
+            <section
+              key={page.title}
+              className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
+            >
+              <div className="p-6 pb-2">
+                <h3 className="flex items-center font-heading text-xl leading-tight">
+                  <Icons.star className="mr-2 h-5 w-5 text-primary" />
+                  {page.title}
+                </h3>
+                {page.description && (
+                  <p className="mt-2 max-w-3xl leading-7 text-muted-foreground">
+                    {page.description}
+                  </p>
+                )}
+              </div>
+              <div className="grid grid-cols-1 gap-4 p-4 pt-3 md:grid-cols-2">
+                {page.imgArr.map((img, imageIndex) => (
+                  <figure
+                    key={img}
+                    className="overflow-hidden rounded-xl border border-border bg-muted/50"
+                  >
+                    <Image
+                      src={img}
+                      alt={`${project.companyName} ${page.title} screenshot ${imageIndex + 1}`}
+                      width={1280}
+                      height={720}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="h-auto w-full"
+                      loading={
+                        pageIndex === 0 && imageIndex === 0 ? "eager" : "lazy"
+                      }
+                    />
+                    <figcaption className="border-t border-border px-4 py-2 text-xs text-muted-foreground">
+                      {page.title} · {imageIndex + 1} of {page.imgArr.length}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+      </section>
 
       <hr className="mt-12" />
       <div className="flex justify-center py-6 lg:py-10">

@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Icons } from "@/components/common/icons";
-import { Button } from "@/components/ui/button";
 import ChipContainer from "@/components/ui/chip-container";
 import { ProjectInterface } from "@/config/projects";
 
@@ -12,39 +11,41 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="relative p-6 max-w-sm bg-background border border-border rounded-lg">
-      <div className="relative w-full h-[200px]">
+    <article className="group relative flex w-full max-w-sm flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+      <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
         <Image
-          className="rounded-lg border border-border object-cover"
+          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
           src={project.companyLogoImg}
-          alt="img"
+          alt={`${project.companyName} project preview`}
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
         />
       </div>
-      <div className="pt-5 space-y-3">
-        <h5 className="text-2xl font-bold tracking-tight text-foreground">
-          {project.companyName}
-        </h5>
-        <p className="line-clamp-3 font-normal text-muted-foreground">
-          {project.shortDescription}
-        </p>
-        <div className="flex gap-2 flex-wrap">
+      <div className="flex flex-1 flex-col gap-4 p-6">
+        <div>
+          <div className="mb-2 flex items-center justify-between gap-3">
+            <h2 className="text-xl font-bold tracking-tight text-foreground">
+              {project.companyName}
+            </h2>
+            <span className="shrink-0 rounded-full border border-border bg-background px-2.5 py-1 text-xs text-muted-foreground">
+              {project.type}
+            </span>
+          </div>
+          <p className="line-clamp-3 text-sm leading-6 text-muted-foreground">
+            {project.shortDescription}
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2">
           <ChipContainer textArr={project.category} />
         </div>
-        <Link href={`/projects/${project.id}`}>
-          <Button variant={"default"} className="mt-2">
-            Read more
-            <Icons.chevronRight className="w-4 ml-1" />
-          </Button>
+        <Link
+          href={`/projects/${project.id}`}
+          className="mt-auto inline-flex w-fit items-center rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          Explore project
+          <Icons.chevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
         </Link>
       </div>
-      <div className="absolute bottom-4 right-4 p-3 rounded-full bg-background border border-border">
-        {project.type === "Personal" ? (
-          <Icons.userFill className="h-4 w-4" />
-        ) : (
-          <Icons.work className="h-4 w-4" />
-        )}
-      </div>
-    </div>
+    </article>
   );
 }

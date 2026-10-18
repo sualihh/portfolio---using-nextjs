@@ -1,44 +1,18 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Norican } from "next/font/google";
 import Link from "next/link";
-import { usePathname, useSelectedLayoutSegment } from "next/navigation";
+import { usePathname } from "next/navigation";
 import * as React from "react";
 
 import { Icons } from "@/components/common/icons";
 import { MobileNav } from "@/components/common/mobile-nav";
-import { siteConfig } from "@/config/site";
-import { cn } from "@/lib/utils";
+import { RouteItem } from "@/config/routes";
 
 interface MainNavProps {
-  items?: any[];
-  children?: React.ReactNode;
+  items: RouteItem[];
 }
 
-const norican = Norican({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-  display: "swap",
-});
-
-// Animation variants for the navigation items
-const navItemVariants = {
-  hidden: { opacity: 0, y: -20 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.1 * i,
-      duration: 0.5,
-      ease: "easeOut" as const,
-    },
-  }),
-};
-
-export function MainNav({ items, children }: MainNavProps) {
-  const segment = useSelectedLayoutSegment();
+export function MainNav({ items }: MainNavProps) {
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   const pathname = usePathname();
 
@@ -47,58 +21,75 @@ export function MainNav({ items, children }: MainNavProps) {
   }, [pathname]);
 
   return (
-    <div className="flex gap-6 md:gap-10">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+    <>
+      <Link
+        href="/"
+        className="group flex items-center gap-3"
+        aria-label="Sualih Mohammed, home"
       >
-        <Link href="/" className="hidden items-center space-x-2 md:flex">
-          <span className={cn(norican.className, "text-2xl")}>
-            {siteConfig.authorName}
+        <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-sm font-bold text-primary-foreground shadow-sm transition-transform group-hover:-rotate-3">
+          SM
+        </span>
+        <span className="hidden sm:block">
+          <span className="block text-sm font-semibold leading-tight">
+            Sualih Mohammed
           </span>
-        </Link>
-      </motion.div>
-      {items?.length ? (
-        <nav className="hidden gap-6 md:flex items-center">
-          {items?.map((item, index) => (
-            <motion.div
-              key={index}
-              custom={index}
-              initial="hidden"
-              animate="visible"
-              variants={navItemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link
-                href={item.disabled ? "#" : item.href}
-                className={cn(
-                  "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
-                  item.href.startsWith(`/${segment}`)
-                    ? "text-foreground"
-                    : "text-foreground/60",
-                  item.disabled && "cursor-not-allowed opacity-80"
-                )}
-              >
-                {item.title}
-              </Link>
-            </motion.div>
-          ))}
-        </nav>
-      ) : null}
-      <motion.button
-        className="flex items-center space-x-2 md:hidden"
-        onClick={() => setShowMobileMenu(!showMobileMenu)}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+          <span className="mt-0.5 block text-xs text-muted-foreground">
+            Full-stack developer
+          </span>
+        </span>
+      </Link>
+      <nav
+        aria-label="Main navigation"
+        className="hidden items-center gap-1 md:flex"
       >
-        {showMobileMenu ? <Icons.close /> : <Icons.menu />}
-        <span className="font-bold">Menu</span>
-      </motion.button>
-      {showMobileMenu && items && (
-        <MobileNav items={items}>{children}</MobileNav>
+        {items.map((item) => {
+          const isActive =
+            pathname === item.href || pathname.startsWith(`${item.href}/`);
+
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              aria-current={isActive ? "page" : undefined}
+              className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                isActive
+                  ? "bg-muted text-foreground"
+                  : "text-muted-foreground hover:bg-muted/70 hover:text-foreground"
+              }`}
+            >
+              {item.title}
+            </Link>
+          );
+        })}
+      </nav>
+      <div className="flex items-center gap-2">
+        <Link
+          href="/contact"
+          className="hidden rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 md:inline-flex"
+        >
+          Let&apos;s talk
+        </Link>
+        <button
+          type="button"
+          className="inline-flex h-10 items-center gap-2 rounded-lg border border-border px-3 text-sm font-medium transition-colors hover:bg-muted md:hidden"
+          onClick={() => setShowMobileMenu((show) => !show)}
+          aria-expanded={showMobileMenu}
+          aria-label={
+            showMobileMenu ? "Close navigation menu" : "Open navigation menu"
+          }
+        >
+          {showMobileMenu ? (
+            <Icons.close className="h-4 w-4" />
+          ) : (
+            <Icons.menu className="h-4 w-4" />
+          )}
+          <span>Menu</span>
+        </button>
+      </div>
+      {showMobileMenu && (
+        <MobileNav items={items} onNavigate={() => setShowMobileMenu(false)} />
       )}
-    </div>
+    </>
   );
 }

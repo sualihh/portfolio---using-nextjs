@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="tooth" x1="148" x2="369" y1="116" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#21B6D7"/>
+      <stop offset="1" stop-color="#2563A9"/>
+    </linearGradient>
+    <linearGradient id="spark" x1="348" x2="405" y1="91" y2="148" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFC66D"/>
+      <stop offset="1" stop-color="#F28C45"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#F0F8FC"/>
+  <circle cx="256" cy="256" r="183" fill="#fff" stroke="#D8EAF3" stroke-width="3"/>
+  <path d="M205 128c-38 0-69 31-69 72 0 25 8 47 18 68l38 77c12 25 21 54 34 82 5 11 11 19 21 19 14 0 22-10 27-28l16-63c3-10 8-20 17-20s14 10 17 20l16 63c5 18 13 28 27 28 10 0 16-8 21-19 13-28 22-57 34-82l38-77c10-21 18-43 18-68 0-41-31-72-69-72-28 0-51 15-77 15s-49-15-77-15Z" transform="translate(-57 -45)" fill="url(#tooth)"/>
+  <path d="m373 83 9 25 25 9-25 9-9 25-9-25-25-9 25-9 9-25Z" fill="url(#spark)"/>
+  <circle cx="126" cy="204" r="7" fill="#F4A451"/>
+  <circle cx="384" cy="305" r="6" fill="#44B8D1"/>
+</svg>

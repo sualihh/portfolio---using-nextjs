@@ -1,5 +1,3 @@
-import { profile } from "console"
-
 export const siteConfig = {
   name: "Sualih Mohammed - Full-Stack Developer | Next.js, TypeScript, MERN & PERN",
   authorName: "Sualih Mohammed",
@@ -12,7 +10,7 @@ export const siteConfig = {
     templateRepo: "https://github.com/sualihh/portfolio",
     twitter: "https://twitter.com/sualihh"
   },
-  image: ".public/profile-img.jpg",
+  image: "/profile-img.jpg",
   keywords: [
     "Sualih Mohammed",
     "Fullstack developer",

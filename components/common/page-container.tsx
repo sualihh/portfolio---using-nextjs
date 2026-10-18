@@ -15,9 +15,9 @@ export default function PageContainer({
 }: PageContainerProps) {
   return (
     <ClientPageWrapper>
-      <div>
+      <div className="px-4 sm:px-6">
         <PageHeader title={title} description={description} />
-        <div className="mx-6">{children}</div>
+        <div>{children}</div>
       </div>
     </ClientPageWrapper>
   );

@@ -2,35 +2,21 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Sualih Mohammed | FullStack Software Developer",
+    name: "Sualih Mohammed | Full-stack Developer",
     short_name: "Sualih Mohammed",
-    description:
-      "Sualih Mohammed - Full Software Developer working at the intersection of AI, data, and scalable software systems.",
+    description: "Full-stack developer building web and mobile products.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
-    theme_color: "#000000",
+    theme_color: "#ffffff",
     icons: [
       {
-        src: "/favicon.ico",
-        sizes: "64x64",
-        type: "image/png",
-      },
-      {
-        src: "/favicon.ico",
-        sizes: "64x64",
-        type: "image/png",
-        purpose: "maskable",
+        src: "/profile-img.jpg",
+        sizes: "400x400",
+        type: "image/jpeg",
       },
     ],
-    categories: [
-      "portfolio",
-      "ai",
-      "software engineering",
-      "machine learning",
-      "developer",
-      "web development",
-    ],
+    categories: ["portfolio", "developer", "web development"],
     lang: "en",
     dir: "ltr",
     scope: "/",
