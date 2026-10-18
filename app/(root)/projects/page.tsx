@@ -4,7 +4,7 @@ import PageContainer from "@/components/common/page-container";
 import ProjectCard from "@/components/projects/project-card";
 import { ResponsiveTabs } from "@/components/ui/responsive-tabs";
 import { pagesConfig } from "@/config/pages";
-import { Projects } from "@/config/projects";
+import { orderedProjects } from "@/config/projects";
 
 export const metadata: Metadata = {
   title: pagesConfig.projects.metadata.title,
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const renderContent = (tabVal: string) => {
-  let projectArr = Projects;
+  let projectArr = orderedProjects;
   if (tabVal === "personal") {
     projectArr = projectArr.filter((val) => val.type === "Personal");
   } else if (tabVal === "professional") {

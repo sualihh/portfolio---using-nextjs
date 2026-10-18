@@ -4,241 +4,173 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
+    --background: 240 33% 98%;
+    --foreground: 230 27% 14%;
+    --muted: 240 30% 95%;
+    --muted-foreground: 228 12% 43%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-
+    --popover-foreground: 230 27% 14%;
+    --border: 235 25% 89%;
+    --input: 235 25% 89%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    --card-foreground: 230 27% 14%;
+    --primary: 258 82% 67%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 250 50% 94%;
+    --secondary-foreground: 252 45% 33%;
+    --accent: 250 50% 94%;
+    --accent-foreground: 252 45% 33%;
     --destructive: 0 100% 50%;
     --destructive-foreground: 210 40% 98%;
-
-    --ring: 215 20.2% 65.1%;
-
-    --radius: 0.5rem;
-
+    --ring: 258 82% 67%;
+    --radius: 0.875rem;
   }
 
   .dark {
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
-
-    --muted: 223 47% 11%;
-    --muted-foreground: 215.4 16.3% 56.9%;
-
-    --accent: 216 34% 17%;
-    --accent-foreground: 210 40% 98%;
-
-    --popover: 224 71% 4%;
-    --popover-foreground: 215 20.2% 65.1%;
-
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
-
-    --card: 224 71% 4%;
-    --card-foreground: 213 31% 91%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 1.2%;
-
-    --secondary: 222.2 47.4% 11.2%;
-    --secondary-foreground: 210 40% 98%;
-
+    --background: 230 25% 8%;
+    --foreground: 225 25% 92%;
+    --muted: 230 22% 13%;
+    --muted-foreground: 225 12% 66%;
+    --popover: 230 25% 10%;
+    --popover-foreground: 225 25% 92%;
+    --border: 230 18% 22%;
+    --input: 230 18% 22%;
+    --card: 230 23% 11%;
+    --card-foreground: 225 25% 92%;
+    --primary: 258 85% 73%;
+    --primary-foreground: 230 25% 8%;
+    --secondary: 230 20% 17%;
+    --secondary-foreground: 225 25% 92%;
+    --accent: 252 28% 19%;
+    --accent-foreground: 250 50% 94%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
-
-    --ring: 216 34% 17%;
-
-    --radius: 0.5rem;
+    --ring: 258 85% 73%;
+    --radius: 0.875rem;
   }
 
   .retro {
     --background: 39 70% 90%;
     --foreground: 20 80% 20%;
-
     --muted: 30 40% 85%;
     --muted-foreground: 20 40% 30%;
-
     --popover: 39 70% 90%;
     --popover-foreground: 20 80% 20%;
-
     --border: 20 40% 70%;
     --input: 20 40% 70%;
-
     --card: 39 60% 85%;
     --card-foreground: 20 80% 20%;
-
     --primary: 20 80% 50%;
     --primary-foreground: 39 100% 97%;
-
     --secondary: 30 60% 80%;
     --secondary-foreground: 20 80% 20%;
-
     --accent: 20 80% 50%;
     --accent-foreground: 39 100% 97%;
-
     --destructive: 0 85% 60%;
     --destructive-foreground: 39 100% 97%;
-
     --ring: 20 40% 70%;
-
-    --radius: 0.125rem;
+    --radius: 0.25rem;
   }
 
   .cyberpunk {
     --background: 235 85% 8%;
     --foreground: 180 100% 75%;
-
     --muted: 235 70% 15%;
     --muted-foreground: 180 70% 55%;
-
     --popover: 235 85% 8%;
     --popover-foreground: 180 100% 75%;
-
     --border: 326 100% 60%;
     --input: 326 100% 60%;
-
     --card: 235 80% 12%;
     --card-foreground: 180 100% 75%;
-
     --primary: 326 100% 60%;
     --primary-foreground: 235 100% 98%;
-
     --secondary: 196 100% 60%;
     --secondary-foreground: 235 85% 8%;
-
     --accent: 58 100% 60%;
     --accent-foreground: 235 85% 8%;
-
     --destructive: 0 100% 60%;
     --destructive-foreground: 235 100% 98%;
-
     --ring: 326 100% 60%;
-
     --radius: 0.125rem;
+  }
+
+  .paper {
+    --background: 40 30% 95%;
+    --foreground: 25 50% 20%;
+    --muted: 30 20% 90%;
+    --muted-foreground: 25 30% 40%;
+    --popover: 40 30% 95%;
+    --popover-foreground: 25 50% 20%;
+    --border: 25 30% 80%;
+    --input: 25 30% 80%;
+    --card: 35 25% 92%;
+    --card-foreground: 25 50% 20%;
+    --primary: 25 95% 40%;
+    --primary-foreground: 40 30% 98%;
+    --secondary: 15 60% 85%;
+    --secondary-foreground: 25 50% 20%;
+    --accent: 15 60% 85%;
+    --accent-foreground: 25 50% 20%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 40 30% 98%;
+    --ring: 25 30% 80%;
+    --radius: 0.25rem;
   }
 
   .aurora {
     --background: 220 40% 10%;
     --foreground: 160 100% 90%;
-
     --muted: 220 30% 20%;
     --muted-foreground: 160 70% 70%;
-
     --popover: 220 40% 10%;
     --popover-foreground: 160 100% 90%;
-
     --border: 280 80% 60%;
     --input: 280 80% 60%;
-
     --card: 220 35% 15%;
     --card-foreground: 160 100% 90%;
-
     --primary: 160 100% 50%;
     --primary-foreground: 220 40% 10%;
-
     --secondary: 280 80% 60%;
     --secondary-foreground: 220 40% 10%;
-
     --accent: 320 80% 60%;
     --accent-foreground: 220 40% 10%;
-
     --destructive: 0 90% 60%;
     --destructive-foreground: 220 40% 10%;
-
     --ring: 280 80% 60%;
-
     --radius: 1rem;
   }
 
   .synthwave {
     --background: 260 15% 10%;
     --foreground: 330 100% 90%;
-
     --muted: 260 20% 20%;
     --muted-foreground: 330 70% 70%;
-
     --popover: 260 15% 10%;
     --popover-foreground: 330 100% 90%;
-
     --border: 300 100% 60%;
     --input: 300 100% 60%;
-
     --card: 260 15% 15%;
     --card-foreground: 330 100% 90%;
-
     --primary: 300 100% 60%;
     --primary-foreground: 260 15% 10%;
-
     --secondary: 190 100% 60%;
     --secondary-foreground: 260 15% 10%;
-
     --accent: 60 100% 60%;
     --accent-foreground: 260 15% 10%;
-
     --destructive: 350 100% 60%;
     --destructive-foreground: 260 15% 10%;
-
     --ring: 300 100% 60%;
-
     --radius: 0.5rem;
   }
 
-  .paper {
-    --background: 40 30% 95%;
-    --foreground: 25 50% 20%;
-
-    --muted: 30 20% 90%;
-    --muted-foreground: 25 30% 40%;
-
-    --popover: 40 30% 95%;
-    --popover-foreground: 25 50% 20%;
-
-    --border: 25 30% 80%;
-    --input: 25 30% 80%;
-
-    --card: 35 25% 92%;
-    --card-foreground: 25 50% 20%;
-
-    --primary: 25 95% 40%;
-    --primary-foreground: 40 30% 98%;
-
-    --secondary: 15 60% 85%;
-    --secondary-foreground: 25 50% 20%;
-
-    --accent: 15 60% 85%;
-    --accent-foreground: 25 50% 20%;
-
-    --destructive: 0 70% 50%;
-    --destructive-foreground: 40 30% 98%;
-
-    --ring: 25 30% 80%;
-
-    --radius: 0.25rem;
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
   }
 
   html,
@@ -248,9 +180,52 @@
 
   body {
     @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(ellipse at 8% 2%, hsl(var(--primary) / 0.07), transparent 28rem),
+      radial-gradient(ellipse at 95% 34%, hsl(var(--primary) / 0.045), transparent 25rem);
+    background-attachment: fixed;
     font-feature-settings:
-      "rlig"1,
-      "calt"1;
+      "rlig" 1,
+      "calt" 1;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply border border-white/70 bg-white/70 shadow-[0_24px_80px_-48px_rgba(47,39,94,0.35)] backdrop-blur-xl dark:border-white/10 dark:bg-card/80;
+  }
+
+  .cyberpunk .glass-panel,
+  .aurora .glass-panel,
+  .synthwave .glass-panel {
+    border-color: hsl(var(--border) / 0.45);
+    background-color: hsl(var(--card) / 0.8);
+  }
+
+  .soft-card {
+    @apply rounded-2xl border border-border/70 bg-card/85 shadow-[0_12px_36px_-28px_rgba(47,39,94,0.32)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_48px_-30px_rgba(47,39,94,0.35)];
+  }
+
+  .section-kicker {
+    @apply text-[11px] font-semibold uppercase tracking-[0.2em] text-primary;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
@@ -289,7 +264,6 @@
 }
 
 @keyframes draw {
-
   0%,
   100% {
     stroke-opacity: 1;

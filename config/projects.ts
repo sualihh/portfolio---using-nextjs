@@ -15,6 +15,7 @@ export interface ProjectInterface {
   id: string;
   type: ValidExpType;
   companyName: string;
+  role?: string;
   category: ValidCategory[];
   shortDescription: string;
   websiteLink?: string;
@@ -30,13 +31,20 @@ export interface ProjectInterface {
 export const Projects: ProjectInterface[] = [
   {
     id: "ecommerce-platform",
-    companyName: "Ecommerce Platform",
+    companyName: "HULUX – Modern E-commerce Web Application",
+    role: "Full-Stack Developer | E-commerce Development",
     type: "Personal",
     category: ["Full Stack", "Backend", "Web Dev"],
     shortDescription:
-      "A complete shopping experience with product discovery, category browsing, order tracking, and a customer storefront.",
-    githubLink: "https://github.com/sualihh/eccomerce",
-    techStack: ["React", "Javascript", "Node.js", "express.js", "MongoDB"],
+      "A modern e-commerce application with product browsing, category filters, product details, cart management, authentication, order processing, and product management.",
+    websiteLink: "https://hulux-eccomerce.vercel.app/",
+    techStack: [
+      "React",
+      "Javascript",
+      "Node.js",
+      "express.js",
+      "MongoDB",
+    ],
     startDate: new Date("2024-01-01"),
     endDate: new Date("2024-06-01"),
     companyLogoImg: "/eccomerce.png",
@@ -87,13 +95,14 @@ export const Projects: ProjectInterface[] = [
     ],
     descriptionDetails: {
       paragraphs: [
-        "This Ecommerce Platform is a complete full-stack solution built to simulate a high-performance online shopping environment.",
-        "The application bridges the gap between consumer-facing interfaces and administrative back-office tools, focusing on seamless product discovery and secure data handling.",
+        "HULUX is a modern e-commerce web application designed to deliver a smooth online shopping experience.",
+        "It combines product discovery and ordering with product management tools, with an emphasis on responsive design, usability, and maintainable architecture.",
       ],
       bullets: [
-        "Developed a full-featured shopping cart system with real-time updates and persistent storage.",
-        "Built a secure administrative dashboard for managing inventory, user roles, and order tracking.",
-        "Engineered a RESTful API using Node.js and Express to manage product catalogs and user authentication.",
+        "Implemented product browsing, category filtering, product details, cart management, and order processing.",
+        "Built product management tools to support online store operations.",
+        "Developed REST APIs with Node.js and Express, backed by MongoDB.",
+        "Focused on authentication, responsive interfaces, and a maintainable full-stack architecture.",
       ],
     },
   },
@@ -200,12 +209,13 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "AI-based-dental-assistant",
-    companyName: "Dental AI Solutions",
+    companyName: "HULUX – AI-Powered Dental Care Management Platform",
+    role: "Full-Stack Developer | AI Application Development",
     type: "AI SaaS",
     category: ["Full Stack", "AI Integration", "Web Dev"],
     shortDescription:
-      "An intelligent dental assistant platform that utilizes AI to analyze dental records, automate appointment scheduling, and provide real-time clinical decision support for practitioners.",
-    githubLink: "https://github.com/sualihh/dental-Ai-Assistant",
+      "An AI-powered dental care platform for patient management, clinic-availability-based appointment scheduling, patient records, and AI-assisted analysis to support clinical decision-making.",
+    websiteLink: "https://hulux-dentalai.vercel.app/",
     techStack: [
       "Next.js",
       "Typescript",
@@ -274,14 +284,14 @@ export const Projects: ProjectInterface[] = [
     ],
     descriptionDetails: {
       paragraphs: [
-        "This AI-based Dental Assistant is a specialized healthcare application designed to bridge the gap between clinical data and actionable insights.",
-        "The platform enhances practice management by automating routine workflows while providing AI-driven analysis to assist dentists in diagnostic decision-making.",
+          "HULUX is an AI-powered dental care management platform designed to help clinics streamline patient management and daily operations.",
+          "It brings together patient dashboards, appointment scheduling based on clinic availability, patient records, and AI-assisted analysis to support clinical decision-making, with usability and workflow automation at its core.",
       ],
       bullets: [
-        "Built a secure backend architecture with Node.js and Express to handle sensitive patient health information.",
-        "Integrated OpenAI's models to analyze dental notes and patient history for clinical pattern recognition.",
-        "Developed a responsive, accessibility-focused UI using Next.js to ensure dentists can access critical data quickly in a clinical setting.",
-        "Utilized Prisma ORM for efficient database management, ensuring data integrity and complex relational mapping between patients, appointments, and diagnostic logs.",
+        "Developed a full-stack platform using Next.js and TypeScript.",
+        "Integrated AI-assisted analysis to identify potential dental concerns and support clinical decision-making.",
+        "Implemented authentication, patient management, patient records, and clinic-availability-based appointment scheduling.",
+        "Designed dashboards and workflows to make common clinic operations easier to manage.",
       ],
     },
   },
@@ -314,19 +324,19 @@ export const Projects: ProjectInterface[] = [
       title: "Sales & Checkout Flow",
       description:
         "Built a fast and intuitive checkout system allowing shop owners to process sales, calculate totals, and handle payments efficiently. Designed for speed under real shop conditions.",
-      imgArr: ["/checkout.png"],
+      imgArr: [],
     },
     {
       title: "Inventory Management",
       description:
         "Implemented real-time inventory tracking with stock updates after each sale. Includes low-stock alerts and product management features.",
-      imgArr: ["/inventory.png"],
+      imgArr: [],
     },
     {
       title: "Reports & Insights",
       description:
         "Generated daily and monthly sales reports to help business owners track performance and make decisions based on real data.",
-      imgArr: ["/reports.png"],
+      imgArr: [],
     },
   ],
 
@@ -346,11 +356,13 @@ export const Projects: ProjectInterface[] = [
 },
   {
     id: "social-media-platform",
-    companyName: "Social Media Platform",
+    companyName: "HULUX – Social Media Application",
+    role: "Full-Stack Developer | Social Media Application Development",
     type: "Personal",
     category: ["Full Stack", "Frontend", "Web Dev"],
     shortDescription:
-      "A full-featured social media platform allowing users to create posts, interact with content, and manage profiles, built with Next.js and TypeScript.",
+      "A modern social platform for connecting with communities through user authentication, profile management, post creation, and social interactions in a responsive interface.",
+    websiteLink: "https://huluxmedia.vercel.app/",
     techStack: [
       "Next.js",
       "Typescript",
@@ -406,12 +418,13 @@ export const Projects: ProjectInterface[] = [
     ],
     descriptionDetails: {
       paragraphs: [
-        "This Social Media Platform is a modern full-stack application designed to simulate a real-world social networking experience.",
-        "It connects users through posts, comments, likes, and profile management, focusing on performance, security, and scalable architecture.",
+        "HULUX is a modern social media platform designed to help people connect, share content, and interact with their communities.",
+        "The application combines user authentication, profile management, post creation, and social interactions in a responsive experience, with a focus on usability, scalable architecture, and seamless communication.",
       ],
       bullets: [
-        "Built a robust RESTful API with Node.js and Express for user, post, and interaction management.",
-        "Implemented client-side state management in Next.js using React hooks and context API.",
+        "Built the application with Next.js and TypeScript, using PostgreSQL for persistence.",
+        "Implemented authentication and user management, including profiles and community interactions.",
+        "Created post and social interaction flows in a responsive user interface.",
         "Used Clerk to handle authentication, sessions, and user management securely with minimal backend code.",
         "Designed responsive and interactive UI components to enhance user experience.",
       ],
@@ -914,4 +927,19 @@ export const Projects: ProjectInterface[] = [
   // },
 ];
 
-export const featuredProjects = Projects.slice(0, 3);
+const featuredProjectOrder = [
+  "ecommerce-platform",
+  "AI-based-dental-assistant",
+  "social-media-platform",
+];
+
+export const orderedProjects = [...Projects].sort((projectA, projectB) => {
+  const indexA = featuredProjectOrder.indexOf(projectA.id);
+  const indexB = featuredProjectOrder.indexOf(projectB.id);
+  const priorityA = indexA === -1 ? featuredProjectOrder.length : indexA;
+  const priorityB = indexB === -1 ? featuredProjectOrder.length : indexB;
+
+  return priorityA - priorityB;
+});
+
+export const featuredProjects = orderedProjects.slice(0, 3);

@@ -52,12 +52,12 @@ export default async function Project({ params }: ProjectPageProps) {
       <Link
         href="/projects"
         className={cn(
-          buttonVariants({ variant: "ghost" }),
-          "absolute left-[-200px] top-14 hidden xl:inline-flex"
+          buttonVariants({ variant: "ghost", size: "sm" }),
+          "mb-8 -ml-2 w-fit rounded-full px-3 text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary"
         )}
       >
-        <Icons.chevronLeft className="mr-2 h-4 w-4" />
-        All Projects
+        <Icons.chevronLeft className="mr-1.5 h-4 w-4" />
+        Back to projects
       </Link>
       <div>
         <time
@@ -85,6 +85,11 @@ export default async function Project({ params }: ProjectPageProps) {
             )}
           </div>
         </h1>
+        {project.role && (
+          <p className="mt-2 text-base font-medium text-muted-foreground">
+            {project.role}
+          </p>
+        )}
         <ChipContainer textArr={project.category} />
         <div className="mt-4 flex space-x-4">
           <Link
@@ -115,7 +120,6 @@ export default async function Project({ params }: ProjectPageProps) {
         width={1280}
         height={720}
         className="my-8 h-auto w-full rounded-2xl border bg-muted shadow-sm"
-        priority
       />
 
       {project.techStack.length > 0 && (
@@ -192,10 +196,13 @@ export default async function Project({ params }: ProjectPageProps) {
       <div className="flex justify-center py-6 lg:py-10">
         <Link
           href="/projects"
-          className={cn(buttonVariants({ variant: "ghost" }))}
+          className={cn(
+            buttonVariants({ variant: "outline" }),
+            "rounded-xl bg-background/70"
+          )}
         >
           <Icons.chevronLeft className="mr-2 h-4 w-4" />
-          All Projects
+          Browse all projects
         </Link>
       </div>
     </article>

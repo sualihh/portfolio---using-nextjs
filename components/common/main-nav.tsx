@@ -44,15 +44,17 @@ export function MainNav({ items }: MainNavProps) {
         className="hidden items-center gap-1 md:flex"
       >
         {items.map((item) => {
+          const isPageLink = !item.href.includes("#");
           const isActive =
-            pathname === item.href || pathname.startsWith(`${item.href}/`);
+            isPageLink &&
+            (pathname === item.href || pathname.startsWith(`${item.href}/`));
 
           return (
             <Link
               key={item.href}
               href={item.href}
               aria-current={isActive ? "page" : undefined}
-              className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+              className={`rounded-xl px-3 py-2 text-sm font-medium transition-colors ${
                 isActive
                   ? "bg-muted text-foreground"
                   : "text-muted-foreground hover:bg-muted/70 hover:text-foreground"

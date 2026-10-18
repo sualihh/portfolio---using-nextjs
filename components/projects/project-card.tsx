@@ -38,13 +38,26 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex flex-wrap gap-2">
           <ChipContainer textArr={project.category} />
         </div>
-        <Link
-          href={`/projects/${project.id}`}
-          className="mt-auto inline-flex w-fit items-center rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-        >
-          Explore project
-          <Icons.chevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-        </Link>
+        <div className="mt-auto flex flex-wrap items-center gap-2">
+          <Link
+            href={`/projects/${project.id}`}
+            className="inline-flex w-fit items-center rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Explore project
+            <Icons.chevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+          </Link>
+          {project.websiteLink && (
+            <Link
+              href={project.websiteLink}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex w-fit items-center rounded-lg border border-border bg-background px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+            >
+              Live demo
+              <Icons.externalLink className="ml-2 h-4 w-4" />
+            </Link>
+          )}
+        </div>
       </div>
     </article>
   );

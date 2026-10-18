@@ -98,7 +98,7 @@ export const experiences: ExperienceInterface[] = [
       "express.js",
     ],
     companyUrl: "",
-    logo: "/pos.png",
+    logo: "/shop-logo.jpg",
   },
   {
     id: "fintech-wallet",

@@ -8,6 +8,7 @@ import {
   ChevronLeft,
   ChevronRight,
   CreditCard,
+  Code2,
   File,
   FileText,
   HelpCircle,
@@ -27,6 +28,7 @@ import {
   Settings,
   Sparkles,
   SunMedium,
+  Smartphone,
   Trash,
   User,
   X,
@@ -69,6 +71,9 @@ import {
 
 export const Icons = {
   contact: Phone,
+  ai: Sparkles,
+  code: Code2,
+  mobile: Smartphone,
   gitRepoIcon: BookMarked,
   gitOrgBuilding: Building,
   gitBranch: IoIosGitBranch,
@@ -126,6 +131,11 @@ export const Icons = {
   linkedin: SiLinkedin,
   userFill: BiSolidUser,
   work: HiBriefcase,
+  retro: Palette,
+  cyberpunk: Zap,
+  paper: Scroll,
+  aurora: Sparkles,
+  synthwave: Music,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"
@@ -168,9 +178,4 @@ export const Icons = {
       </svg>
     </div>
   ),
-  retro: Palette,
-  cyberpunk: Zap,
-  paper: Scroll,
-  aurora: Sparkles,
-  synthwave: Music,
 };

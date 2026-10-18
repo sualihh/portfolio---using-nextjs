@@ -9,8 +9,8 @@ interface MobileNavProps {
 
 export function MobileNav({ items, onNavigate }: MobileNavProps) {
   return (
-    <div className="absolute inset-x-0 top-full z-50 border-b border-border bg-background px-4 pb-5 pt-3 shadow-xl md:hidden">
-      <nav aria-label="Mobile navigation" className="container grid gap-1">
+    <div className="absolute inset-x-0 top-full z-50 mt-2 rounded-2xl border border-border/70 bg-background/95 px-4 pb-5 pt-3 shadow-xl backdrop-blur-xl md:hidden">
+      <nav aria-label="Mobile navigation" className="grid gap-1">
         {items.map((item) => (
           <Link
             key={item.href}
