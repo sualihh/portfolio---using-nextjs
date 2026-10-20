@@ -1,14 +1,7 @@
 import { create } from "zustand";
 
 
-interface ModalStoreProps {
-  isOpen: boolean;
-  title: string;
-  description: string;
-  icon: any;
-  onOpen: (data: ModalDataProps) => void;
-  onClose: () => void;
-}
+
 
 export const useModalStore = create<ModalStoreProps>((set) => ({
   isOpen: false,
