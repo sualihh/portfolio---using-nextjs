@@ -17,6 +17,9 @@ const getYearFromDate = (date: Date): string => {
 // Helper function to get duration text
 
 
+interface TimelineProps {
+  experiences: ExperienceInterface[];
+}
 
 const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
   // Sort experiences by date (most recent first)
