@@ -15,3 +15,4 @@ import { ExperienceInterface } from "@/config/experience";
 
 
 
+export default ExperienceCard;
