@@ -12,9 +12,7 @@ import { ExperienceInterface } from "@/config/experience";
 
 // Helper function to get duration text
 
-interface ExperienceCardProps {
-  experience: ExperienceInterface;
-}
+
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
