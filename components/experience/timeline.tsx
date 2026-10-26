@@ -25,8 +25,5 @@ const getDurationText = (
   return `${startYear} - ${endYear}`;
 };
 
-interface TimelineProps {
-  experiences: ExperienceInterface[];
-}
 
 
