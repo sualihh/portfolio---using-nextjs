@@ -15,7 +15,15 @@ const getYearFromDate = (date: Date): string => {
 };
 
 // Helper function to get duration text
-
+const getDurationText = (
+  startDate: Date,
+  endDate: Date | "Present"
+): string => {
+  const startYear = getYearFromDate(startDate);
+  const endYear =
+    typeof endDate === "string" ? "Present" : getYearFromDate(endDate);
+  return `${startYear} - ${endYear}`;
+};
 
 
 
