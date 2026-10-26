@@ -30,5 +30,3 @@ interface TimelineProps {
 }
 
 
-
-export default Timeline;
