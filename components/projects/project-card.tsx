@@ -5,9 +5,7 @@ import { Icons } from "@/components/common/icons";
 import ChipContainer from "@/components/ui/chip-container";
 import { ProjectInterface } from "@/config/projects";
 
-interface ProjectCardProps {
-  project: ProjectInterface;
-}
+
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
