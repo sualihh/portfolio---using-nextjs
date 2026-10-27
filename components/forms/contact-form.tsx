@@ -29,17 +29,6 @@ const formSchema = z.object({
   social: z.string().url().optional().or(z.literal("")),
 });
 
-export function ContactForm() {
-  const storeModal = useModalStore();
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-      social: "",
-    },
-  });
 
 
 
