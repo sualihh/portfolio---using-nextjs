@@ -41,7 +41,34 @@ export function ContactForm() {
     },
   });
 
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
 
+      if (!response.ok) {
+        throw new Error("Message could not be sent.");
+      }
+
+      form.reset();
+      storeModal.onOpen({
+        title: "Thank you!",
+        description:
+          "Your message has been received. I appreciate you reaching out and will get back to you shortly.",
+        icon: Icons.successAnimated,
+      });
+    } catch {
+      form.setError("root.serverError", {
+        message:
+          "Your message could not be sent. Please try again or contact me directly.",
+      });
+    }
+  }
 
   return (
     <Form {...form}>
