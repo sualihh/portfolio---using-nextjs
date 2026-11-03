@@ -43,10 +43,40 @@ import { useModalStore } from "@/hooks/use-modal-store";
           )}
         />
       
-      
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Message</FormLabel>
+              <FormControl>
+                <Textarea
+                  className="min-h-32 resize-y"
+                  placeholder="A few details about your project or question..."
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
           )}
         />
-      
+        <FormField
+          control={form.control}
+          name="social"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Social (optional)</FormLabel>
+              <FormControl>
+                <Input
+                  type="url"
+                  placeholder="https://..."
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         {form.formState.errors.root?.serverError && (
           <p className="text-sm text-destructive" role="alert">
             {form.formState.errors.root.serverError.message}
