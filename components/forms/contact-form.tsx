@@ -43,21 +43,7 @@ import { useModalStore } from "@/hooks/use-modal-store";
           )}
         />
       
-        <FormField
-          control={form.control}
-          name="message"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Message</FormLabel>
-              <FormControl>
-                <Textarea
-                  className="min-h-32 resize-y"
-                  placeholder="A few details about your project or question..."
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
+      
           )}
         />
         <FormField
