@@ -47,5 +47,22 @@ import { useModalStore } from "@/hooks/use-modal-store";
           )}
         />
       
-
+        {form.formState.errors.root?.serverError && (
+          <p className="text-sm text-destructive" role="alert">
+            {form.formState.errors.root.serverError.message}
+          </p>
+        )}
+        <Button
+          type="submit"
+          disabled={form.formState.isSubmitting}
+          className="min-w-32 rounded-xl"
+        >
+          {form.formState.isSubmitting && (
+            <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+          )}
+          {form.formState.isSubmitting ? "Sending..." : "Send message"}
+        </Button>
+      </form>
+    </Form>
+  );
 }
