@@ -29,23 +29,7 @@ import { useModalStore } from "@/hooks/use-modal-store";
         onSubmit={form.handleSubmit(onSubmit)}
         className="min-w-full space-y-5"
       >
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Name</FormLabel>
-              <FormControl>
-                <Input autoComplete="name" placeholder="Your name" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      
-      
-          )}
-        />
+       
       
 
 }
