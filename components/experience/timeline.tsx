@@ -25,6 +25,10 @@ const getDurationText = (
   return `${startYear} - ${endYear}`;
 };
 
+interface TimelineProps {
+  experiences: ExperienceInterface[];
+}
+
 
   return (
     <div className="space-y-4">
