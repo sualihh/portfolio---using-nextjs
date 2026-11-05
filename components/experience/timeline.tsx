@@ -29,6 +29,10 @@ interface TimelineProps {
   experiences: ExperienceInterface[];
 }
 
+const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
+  // Sort experiences by date (most recent first)
+  
+  });
 
   return (
     <div className="space-y-4">
