@@ -15,7 +15,13 @@ export const skillsUnsorted: skillsInterface[] = [
 
 
 
-  
+  {
+    name: "Javascript",
+    description:
+      "Create interactive and dynamic web experiences with the versatile scripting language.",
+    rating: 5,
+    icon: Icons.javascript,
+  },
   {
     name: "HTML 5",
     description:
