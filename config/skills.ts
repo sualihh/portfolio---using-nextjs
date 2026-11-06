@@ -15,14 +15,7 @@ export const skillsUnsorted: skillsInterface[] = [
 
 
 
-  
-  {
-    name: "HTML 5",
-    description:
-      "Structure web content beautifully with the latest version of HyperText Markup Language.",
-    rating: 4,
-    icon: Icons.html5,
-  },
+
   {
     name: "CSS 3",
     description:
