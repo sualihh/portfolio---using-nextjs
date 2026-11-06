@@ -14,7 +14,13 @@ export const skillsUnsorted: skillsInterface[] = [
 
 
 
-s
+  {
+    name: "GraphQL",
+    description:
+      "Fetch data precisely with a powerful query language for APIs and runtime execution.",
+    rating: 4,
+    icon: Icons.graphql,
+  },
   // {
   //   name: "Nest.js",
   //   description:
