@@ -14,6 +14,14 @@ export const skillsUnsorted: skillsInterface[] = [
 
 
 
+s
+  // {
+  //   name: "Nest.js",
+  //   description:
+  //     "Create scalable and modular applications with a progressive Node.js framework.",
+  //   rating: 4,
+  //   icon: Icons.nestjs,
+  // },
 
   {
     name: "Javascript",
