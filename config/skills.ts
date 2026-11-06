@@ -13,13 +13,6 @@ export const skillsUnsorted: skillsInterface[] = [
  
 
   {
-    name: "MongoDB",
-    description:
-      "Store and retrieve data seamlessly with a flexible and scalable NoSQL database.",
-    rating: 5,
-    icon: Icons.mongodb,
-  },
-  {
     name: "Typescript",
     description:
       "Enhance JavaScript with static types, making code more understandable and reliable.",
