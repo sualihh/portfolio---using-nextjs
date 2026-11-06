@@ -11,13 +11,7 @@ export const skillsUnsorted: skillsInterface[] = [
   
  
  
-  {
-    name: "Node.js",
-    description:
-      "Run JavaScript on the server side, enabling dynamic and responsive applications.",
-    rating: 5,
-    icon: Icons.nodejs,
-  },
+
   {
     name: "MongoDB",
     description:
