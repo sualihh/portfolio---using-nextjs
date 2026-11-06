@@ -12,7 +12,13 @@ export const skillsUnsorted: skillsInterface[] = [
  
  
 
-
+  {
+    name: "Typescript",
+    description:
+      "Enhance JavaScript with static types, making code more understandable and reliable.",
+    rating: 5,
+    icon: Icons.typescript,
+  },
 
   {
     name: "GraphQL",
