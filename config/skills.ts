@@ -9,7 +9,13 @@ export interface skillsInterface {
 
 export const skillsUnsorted: skillsInterface[] = [
  
-
+  {
+    name: "React Native",
+    description:
+      "Build cross-platform mobile applications using a single codebase, enabling fast development of performant iOS and Android apps with native components and APIs.",
+    rating: 5,
+    icon: Icons.react,
+  },
   {
     name: "React",
     description:
