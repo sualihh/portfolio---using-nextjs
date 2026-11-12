@@ -8,13 +8,7 @@ export interface skillsInterface {
 }
 
 export const skillsUnsorted: skillsInterface[] = [
-  {
-    name: "Next.js",
-    description:
-      "Effortlessly build dynamic apps with routing, layouts, loading UI, and API routes.",
-    rating: 5,
-    icon: Icons.nextjs,
-  },
+
   {
     name: "React Native",
     description:
