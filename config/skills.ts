@@ -1,9 +1,20 @@
 import { Icons } from "@/components/common/icons";
 
-
+export interface skillsInterface {
+  name: string;
+  description: string;
+  rating: number;
+  icon: any;
+}
 
 export const skillsUnsorted: skillsInterface[] = [
-
+  {
+    name: "Next.js",
+    description:
+      "Effortlessly build dynamic apps with routing, layouts, loading UI, and API routes.",
+    rating: 5,
+    icon: Icons.nextjs,
+  },
   {
     name: "React Native",
     description:
