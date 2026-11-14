@@ -6,13 +6,7 @@ export const skillsUnsorted: skillsInterface[] = [
 
 
 
-  {
-    name: "express.js",
-    description:
-      "Build web applications and APIs quickly using a fast, unopinionated Node.js framework.",
-    rating: 5,
-    icon: Icons.express,
-  },
+ 
   {
     name: "Node.js",
     description:
