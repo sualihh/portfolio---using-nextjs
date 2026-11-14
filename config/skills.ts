@@ -5,13 +5,7 @@ import { Icons } from "@/components/common/icons";
 export const skillsUnsorted: skillsInterface[] = [
 
 
-  {
-    name: "React",
-    description:
-      "Craft interactive user interfaces using components, state, props, and virtual DOM.",
-    rating: 5,
-    icon: Icons.react,
-  },
+
   {
     name: "express.js",
     description:
