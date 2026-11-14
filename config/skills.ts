@@ -1,11 +1,6 @@
 import { Icons } from "@/components/common/icons";
 
-export interface skillsInterface {
-  name: string;
-  description: string;
-  rating: number;
-  icon: any;
-}
+
 
 export const skillsUnsorted: skillsInterface[] = [
   {
